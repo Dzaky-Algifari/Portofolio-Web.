@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzaky Algifari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar" id="myNavbar">
+        <div class="container">
+            <h1 class="logo"><a href="#home">Dzaky Algifari</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Tentang Saya</a></li>
+                    <li><a href="#skills">Keterampilan</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Halo, Dzaky Algifari <div Dzaky="" Algifari=""></div></h2>
+            <p>Seorang pengembang web yang antusias.</p>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <p>Saya seorang mahasiswa di universitas pamulang teknik informatika</p>
+            <p>Saya percaya pada kekuatan pembelajaran berkelanjutan dan selalu mencari peluang baru untuk tumbuh. Mari berkolaborasi!</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2>Keterampilan</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>HTML5</h3>
+                    <p>Memahami struktur dasar halaman web dan penggunaan elemen semantik.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>CSS3</h3>
+                    <p>Mampu mendesain dan menata tampilan halaman web agar menarik dan responsif.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>JavaScript (Dasar)</h3>
+                    <p>Mengenal dasar-dasar JavaScript untuk menambahkan interaktivitas pada web.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Desain Responsif</h3>
+                    <p>Mampu membuat website yang tampil baik di berbagai ukuran layar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Kontak</h2>
+            <p>Jangan ragu untuk menghubungi saya!</p>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: dzakyalgifariii30@gmail.com
+                
+                    </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Nama Anda]. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript untuk Navbar Sticky
+        window.onscroll = function() { stickyNavbar() };
+
+        var navbar = document.getElementById("myNavbar");
+        var sticky = navbar.offsetTop;
+
+        function stickyNavbar() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+        // JavaScript untuk Scroll Halus
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
